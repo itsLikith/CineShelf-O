@@ -1,0 +1,42 @@
+.authpage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../assets/images/Auth/AuthBG.jpeg') no-repeat fixed center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.form {
+  width: 35%;
+  padding: 20px;
+  min-width: 200px;
+  max-width: 450px;
+  background-color: rgba(0, 0, 0, 0.825);
+}
+@media (max-width: 750px) {
+  .form {
+    width: 50%;
+    padding: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .form {
+    width: 55%;
+    padding: 12px;
+  }
+}
+@media (max-width: 400px) {
+  .form {
+    width: 60%;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 700px) {
+  .form {
+    width: 50%;
+  }
+}
