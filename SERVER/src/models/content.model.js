@@ -14,7 +14,14 @@ const cineSchema = mongoose.Schema({
     type: [
       {
         actors: {
-          type: []
+          type: [
+            {
+              name: {
+                type: String
+              },
+              
+            }
+          ]
         }
       }
     ],
