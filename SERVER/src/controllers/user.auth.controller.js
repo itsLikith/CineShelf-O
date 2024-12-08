@@ -49,7 +49,11 @@ const login = async (req, res) => {
     });
     return ApiResponse.success(
       'Login successfull',
-      { 'Access Token': accessToken, 'Refresh Token': refreshToken },
+      {
+        'Access Token': accessToken,
+        'Refresh Token': refreshToken,
+        'Logged User': user.email,
+      },
       200,
     ).send(res);
   } catch (error) {
@@ -103,16 +107,13 @@ const logout = async (req, res) => {
     );
     res.clearCookie('CineShelfAccessToken');
     res.clearCookie('CineShelfRefreshToken');
-    return ApiResponse.success('User successfully logged out',null,200).send(res);
+    return ApiResponse.success('User successfully logged out', null, 200).send(
+      res,
+    );
   } catch (error) {
     console.error(error);
     return ApiResponse.error('Internal server error', null, 500).send(res);
   }
 };
 
-export { 
-  verifyMail, 
-  login, 
-  signup, 
-  logout 
-};
+export { verifyMail, login, signup, logout };

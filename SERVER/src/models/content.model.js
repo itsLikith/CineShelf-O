@@ -17,16 +17,15 @@ const cineSchema = mongoose.Schema({
           type: [
             {
               name: {
-                type: String
+                type: String,
               },
-              
-            }
-          ]
-        }
-      }
+            },
+          ],
+        },
+      },
     ],
-    required: true
-  }
+    required: true,
+  },
 });
 
 const shelfSchema = mongoose.Schema({

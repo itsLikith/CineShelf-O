@@ -37,8 +37,12 @@ app.get('/', (req, res) => {
 });
 
 // User Authentication routes here
-import { authroutes } from './routes/auth.routes.js';
-app.use('/api/user', authroutes);
+import { userauthroutes } from './routes/user.auth.routes.js';
+app.use('/api/user', userauthroutes);
+
+// Admin Authentication routes here
+import { adminauthroutes } from './routes/admin.auth.routes.js';
+app.use('/api/admin', adminauthroutes);
 
 connectDB()
   .then(() => {
